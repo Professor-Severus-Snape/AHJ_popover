@@ -18,54 +18,7 @@ button:active {
 .container {
   display: flex;
   margin: 0 auto;
-  padding: 250px;
-}
-
-.btn {
-  -webkit-tap-highlight-color: transparent;
-  margin: auto;
-  padding: 15px;
-  border: none;
-  font-size: inherit;
-  color: #fff;
-  background-color: #da3b4a;
-  cursor: pointer;
-}
-
-.popover {
-  position: absolute;
-  z-index: 999;
-  top: 192px;
-  left: 700px;
-  border: 1px solid #ccc;
-  border-radius: 10px;
-  width: 280px;
-  background-color: #fff;
-}
-
-.popover__title {
-  padding: 10px;
-  border-bottom: 1px solid #ccc;
-  background-color: #f7f7f7;
-  border-radius: 10px 10px 0px 0px; /* top-left | top-right | bottom-right | bottom-left */
-}
-
-.popover__text {
-  padding: 10px;
-}
-
-.popover__arrow {
-  position: absolute;
-  top: 100.7%;
-  left: 50%;
-  transform: translate(-50%, -50%) rotate(45deg);
-
-  width: 10px;
-  height: 10px;
-  border-right: 1px solid #ccc;
-  border-bottom: 1px solid #ccc;
-
-  background-color: #fff;
+  padding: 250px 20px;
 }
 
 .hidden {
