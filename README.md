@@ -1,5 +1,7 @@
 # Домашнее задание к занятию "5. Работа с HTML-формами"
 
+[![Build status](https://ci.appveyor.com/api/projects/status/9jvlktkyabgneud9?svg=true)](https://ci.appveyor.com/project/Professor-Severus-Snape/ahj-popover)
+
 Правила сдачи задания:
 
 1. В рамках этого ДЗ можно использовать любой менеджер пакетов.
