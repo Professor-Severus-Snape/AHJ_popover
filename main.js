@@ -3615,7 +3615,7 @@ var es_object_to_string = __webpack_require__(6099);
 var es_string_iterator = __webpack_require__(7764);
 // EXTERNAL MODULE: ./node_modules/core-js/modules/web.dom-collections.iterator.js
 var web_dom_collections_iterator = __webpack_require__(2953);
-;// CONCATENATED MODULE: ./src/components/button/button.js
+;// CONCATENATED MODULE: ./src/components/button/Button.js
 
 
 
@@ -3627,23 +3627,31 @@ var web_dom_collections_iterator = __webpack_require__(2953);
 
 
 function _typeof(o) { "@babel/helpers - typeof"; return _typeof = "function" == typeof Symbol && "symbol" == typeof Symbol.iterator ? function (o) { return typeof o; } : function (o) { return o && "function" == typeof Symbol && o.constructor === Symbol && o !== Symbol.prototype ? "symbol" : typeof o; }, _typeof(o); }
+function _classCallCheck(a, n) { if (!(a instanceof n)) throw new TypeError("Cannot call a class as a function"); }
 function _defineProperties(e, r) { for (var t = 0; t < r.length; t++) { var o = r[t]; o.enumerable = o.enumerable || !1, o.configurable = !0, "value" in o && (o.writable = !0), Object.defineProperty(e, _toPropertyKey(o.key), o); } }
 function _createClass(e, r, t) { return r && _defineProperties(e.prototype, r), t && _defineProperties(e, t), Object.defineProperty(e, "prototype", { writable: !1 }), e; }
 function _toPropertyKey(t) { var i = _toPrimitive(t, "string"); return "symbol" == _typeof(i) ? i : i + ""; }
 function _toPrimitive(t, r) { if ("object" != _typeof(t) || !t) return t; var e = t[Symbol.toPrimitive]; if (void 0 !== e) { var i = e.call(t, r || "default"); if ("object" != _typeof(i)) return i; throw new TypeError("@@toPrimitive must return a primitive value."); } return ("string" === r ? String : Number)(t); }
-function _classCallCheck(a, n) { if (!(a instanceof n)) throw new TypeError("Cannot call a class as a function"); }
 
 
 // <button class="btn" type="button">Click to toggle popover</button>
-var Button = /*#__PURE__*/_createClass(function Button() {
-  _classCallCheck(this, Button);
-  this.element = document.createElement('button');
-  this.element.classList.add('btn');
-  this.element.type = 'button';
-  this.element.textContent = 'Click to toggle popover';
-});
+var Button = /*#__PURE__*/function () {
+  function Button() {
+    _classCallCheck(this, Button);
+    this.element = document.createElement('button');
+    this.element.classList.add('btn');
+    this.element.type = 'button';
+    this.element.textContent = 'Click to toggle popover';
+  }
+  return _createClass(Button, [{
+    key: "setEventClick",
+    value: function setEventClick(callback) {
+      this.element.addEventListener('click', callback);
+    }
+  }]);
+}();
 
-;// CONCATENATED MODULE: ./src/components/popover/popover.js
+;// CONCATENATED MODULE: ./src/components/popover/Popover.js
 
 
 
@@ -3654,12 +3662,12 @@ var Button = /*#__PURE__*/_createClass(function Button() {
 
 
 
-function popover_typeof(o) { "@babel/helpers - typeof"; return popover_typeof = "function" == typeof Symbol && "symbol" == typeof Symbol.iterator ? function (o) { return typeof o; } : function (o) { return o && "function" == typeof Symbol && o.constructor === Symbol && o !== Symbol.prototype ? "symbol" : typeof o; }, popover_typeof(o); }
-function popover_classCallCheck(a, n) { if (!(a instanceof n)) throw new TypeError("Cannot call a class as a function"); }
-function popover_defineProperties(e, r) { for (var t = 0; t < r.length; t++) { var o = r[t]; o.enumerable = o.enumerable || !1, o.configurable = !0, "value" in o && (o.writable = !0), Object.defineProperty(e, popover_toPropertyKey(o.key), o); } }
-function popover_createClass(e, r, t) { return r && popover_defineProperties(e.prototype, r), t && popover_defineProperties(e, t), Object.defineProperty(e, "prototype", { writable: !1 }), e; }
-function popover_toPropertyKey(t) { var i = popover_toPrimitive(t, "string"); return "symbol" == popover_typeof(i) ? i : i + ""; }
-function popover_toPrimitive(t, r) { if ("object" != popover_typeof(t) || !t) return t; var e = t[Symbol.toPrimitive]; if (void 0 !== e) { var i = e.call(t, r || "default"); if ("object" != popover_typeof(i)) return i; throw new TypeError("@@toPrimitive must return a primitive value."); } return ("string" === r ? String : Number)(t); }
+function Popover_typeof(o) { "@babel/helpers - typeof"; return Popover_typeof = "function" == typeof Symbol && "symbol" == typeof Symbol.iterator ? function (o) { return typeof o; } : function (o) { return o && "function" == typeof Symbol && o.constructor === Symbol && o !== Symbol.prototype ? "symbol" : typeof o; }, Popover_typeof(o); }
+function Popover_classCallCheck(a, n) { if (!(a instanceof n)) throw new TypeError("Cannot call a class as a function"); }
+function Popover_defineProperties(e, r) { for (var t = 0; t < r.length; t++) { var o = r[t]; o.enumerable = o.enumerable || !1, o.configurable = !0, "value" in o && (o.writable = !0), Object.defineProperty(e, Popover_toPropertyKey(o.key), o); } }
+function Popover_createClass(e, r, t) { return r && Popover_defineProperties(e.prototype, r), t && Popover_defineProperties(e, t), Object.defineProperty(e, "prototype", { writable: !1 }), e; }
+function Popover_toPropertyKey(t) { var i = Popover_toPrimitive(t, "string"); return "symbol" == Popover_typeof(i) ? i : i + ""; }
+function Popover_toPrimitive(t, r) { if ("object" != Popover_typeof(t) || !t) return t; var e = t[Symbol.toPrimitive]; if (void 0 !== e) { var i = e.call(t, r || "default"); if ("object" != Popover_typeof(i)) return i; throw new TypeError("@@toPrimitive must return a primitive value."); } return ("string" === r ? String : Number)(t); }
 
 
 // <div class="popover hidden">
@@ -3669,7 +3677,7 @@ function popover_toPrimitive(t, r) { if ("object" != popover_typeof(t) || !t) re
 // </div>
 var Popover = /*#__PURE__*/function () {
   function Popover() {
-    popover_classCallCheck(this, Popover);
+    Popover_classCallCheck(this, Popover);
     this.element = document.createElement('div');
     this.element.classList.add('popover', 'hidden');
     this.titleElement = document.createElement('h3');
@@ -3682,7 +3690,7 @@ var Popover = /*#__PURE__*/function () {
     this.arrowElement.classList.add('popover__arrow');
     this.element.append(this.titleElement, this.textElement, this.arrowElement);
   }
-  return popover_createClass(Popover, [{
+  return Popover_createClass(Popover, [{
     key: "changeVisibility",
     value: function changeVisibility() {
       this.element.classList.toggle('hidden');
@@ -3730,7 +3738,7 @@ var App = /*#__PURE__*/function () {
     value: function init() {
       this.container.append(this.button.element);
       this.container.append(this.popover.element);
-      this.button.element.addEventListener('click', this.onBtnClick.bind(this));
+      this.button.setEventClick(this.onBtnClick.bind(this));
     }
   }, {
     key: "onBtnClick",
