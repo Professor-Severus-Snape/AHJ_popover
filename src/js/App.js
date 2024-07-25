@@ -1,10 +1,9 @@
-import Button from '../components/button/button';
-import Popover from '../components/popover/popover';
+import Button from '../components/button/Button';
+import Popover from '../components/popover/Popover';
 
 export default class App {
   constructor() {
     this.container = document.querySelector('.container');
-
     this.button = new Button();
     this.popover = new Popover();
   }
@@ -12,8 +11,7 @@ export default class App {
   init() {
     this.container.append(this.button.element);
     this.container.append(this.popover.element);
-
-    this.button.element.addEventListener('click', this.onBtnClick.bind(this));
+    this.button.setEventClick(this.onBtnClick.bind(this));
   }
 
   onBtnClick(event) {

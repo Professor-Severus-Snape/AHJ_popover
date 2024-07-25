@@ -8,4 +8,8 @@ export default class Button {
     this.element.type = 'button';
     this.element.textContent = 'Click to toggle popover';
   }
+
+  setEventClick(callback) {
+    this.element.addEventListener('click', callback);
+  }
 }
